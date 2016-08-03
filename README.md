@@ -1,4 +1,4 @@
-# mapapps-content-openweathermap
+# Content-Bundle for Office Locations
 This example configuration of a content bundle adds the openweathermap datastore to the app and presents the weather data in the map.
 
 ### Sample App ###
