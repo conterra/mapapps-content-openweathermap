@@ -1,0 +1,76 @@
+{
+  "properties": {
+    "title": "OpenWeatherMap Content Bundle"
+  },
+  "load": {
+    "bundleLocations": [
+      "localbundles",
+      "bundles"
+    ],
+    "allowedBundles": [
+      "system",
+      "splashscreen",
+      "map",
+      "themes",
+      "templates",
+      "templatelayout",
+      "windowmanager",
+      "toolrules",
+      "console",
+      "banner",
+      "content_openweathermap"
+    ]
+  },
+  "bundles": {
+    "banner": {
+      "BannerWidget": {
+        "label": "Developer Network",
+        "image": "https://www.conterra.de/~/media/conterra/images/site_logos/conterra-logo.ashx",
+        "imagePosition": "above",
+        "link": "http://conterra.de"
+      }
+    },
+    "map": {
+      "MapState": {
+        "initialExtent": {
+          "xmin": -1100000,
+          "ymin": 4000000,
+          "xmax": 3500000,
+          "ymax": 8800000,
+          "spatialReference": {
+            "wkid": 3857
+          }
+        }
+      },
+      "MapModelFactory": {
+        "_configData": {
+          "maps": [
+            {
+              "id": "default",
+              "glass_pane": [],
+              "operationalLayer": [],
+              "baseLayer": [
+                {
+                  "service": "streets",
+                  "enabled": true
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "MappingResourceRegistryFactory": {
+        "_knownServices": {
+          "services": [
+            {
+              "id": "streets",
+              "url": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer",
+              "type": "AGS_TILED",
+              "title": "${service.streets}"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
