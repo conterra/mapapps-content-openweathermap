@@ -447,7 +447,7 @@
         </plugins>
     </build>
     <scm>
-        <developerConnection>scm:git:git@github.com:conterra/mapapps-content-office-locations.git</developerConnection>
+        <developerConnection>scm:git:git@github.com:conterra/mapapps-content-openweathermap.git</developerConnection>
     </scm>
     <distributionManagement>
         <repository>
