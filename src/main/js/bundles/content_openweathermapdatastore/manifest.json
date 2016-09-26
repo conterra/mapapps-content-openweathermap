@@ -9,7 +9,7 @@
     "search"
   ],
   //"Bundle-AutoStartPolicy": false,
-  "Product-Name": "con terra Developer Network",
+  "Product-Name": "devnet-mapapps-content-openweathermap",
   "Require-Bundle": [
     {
       "name": "contentviewer"
