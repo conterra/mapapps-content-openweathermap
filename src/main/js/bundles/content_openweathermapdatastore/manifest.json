@@ -12,7 +12,8 @@
   "Product-Name": "devnet-mapapps-content-openweathermap",
   "Require-Bundle": [
     {
-      "name": "contentviewer"
+      "name": "contentviewer",
+      "version": "^3.5.2"
     },
     {
       "name": "d3"
@@ -21,10 +22,12 @@
       "name": "c3"
     },
     {
-      "name": "resultcenter"
+      "name": "resultcenter",
+      "version": "^3.5.2"
     },
     {
-      "name": "omnisearch"
+      "name": "omnisearch",
+      "version": "^3.5.2"
     }
   ],
   "CSS-Themes-Extension": [
