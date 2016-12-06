@@ -83,7 +83,7 @@
       ],
       "propertiesConstructor": true,
       "properties": {
-        "apikey": "76dc198e95f85c4f3daa4f20434f7035",
+        "apikey": "*your api key*",
         "contentRules": [
           {
             "matches": {
@@ -127,7 +127,7 @@
         "omniSearchTypingDelay": 500,
         "url": "http://api.openweathermap.org/data/2.5/box/city",
         "mapZoom": 6,
-        "apikey": "76dc198e95f85c4f3daa4f20434f7035",
+        "apikey": "*your api key*",
         "metadata": {
           "title": "OpenWeatherMap DataStore",
           "name": "title",
