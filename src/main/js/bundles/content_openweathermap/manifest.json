@@ -88,6 +88,7 @@
       ],
       "propertiesConstructor": true,
       "properties": {
+        "apikey": "*your api key*",
         "contentRules": [
           {
             "matches": {
@@ -134,6 +135,7 @@
           // Germany
           "6,55,15,47,8"
         ],
+        "apikey": "*your api key*",
         "metadata": {
           "title": "OpenWeatherMap DataStore",
           "name": "title",
