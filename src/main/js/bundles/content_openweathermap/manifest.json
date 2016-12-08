@@ -1,6 +1,6 @@
 {
   "Bundle-SymbolicName": "content_openweathermap",
-  "Bundle-Version": "1.0.1-SNAPSHOT",
+  "Bundle-Version": "1.1.0-SNAPSHOT",
   "Bundle-Name": "Content: OpenWeatherMap",
   "Bundle-Description": "This bundle provides data and functionality for OpenWeatherMap",
   "Bundle-Vendor": "con terra GmbH",
@@ -13,21 +13,26 @@
   "Require-Bundle": [
     {
       "name": "contentviewer",
-      "version": "^3.5.2"
+      "version": "^3.2.1"
     },
     {
-      "name": "d3"
+      "name": "notifier",
+      "version": "^3.2.1"
+    },
+    {
+      "name": "d3",
+      "version": "^3.2.1"
     },
     {
       "name": "c3"
     },
     {
       "name": "resultcenter",
-      "version": "^3.5.2"
+      "version": "^3.2.1"
     },
     {
       "name": "omnisearch",
-      "version": "^3.5.2"
+      "version": "^3.2.1"
     }
   ],
   "CSS-Themes-Extension": [
@@ -83,7 +88,6 @@
       ],
       "propertiesConstructor": true,
       "properties": {
-        "apikey": "*your api key*",
         "contentRules": [
           {
             "matches": {
@@ -126,8 +130,10 @@
         "omniSearchLabelAttr": "name",
         "omniSearchTypingDelay": 500,
         "url": "http://api.openweathermap.org/data/2.5/box/city",
-        "mapZoom": 6,
-        "apikey": "*your api key*",
+        "bboxes": [
+          // Germany
+          "6,55,15,47,8"
+        ],
         "metadata": {
           "title": "OpenWeatherMap DataStore",
           "name": "title",
@@ -510,6 +516,10 @@
         {
           "name": "_coordinateTransformer",
           "providing": "ct.api.coordinatetransformer.CoordinateTransformer"
+        },
+        {
+          "name": "_logService",
+          "providing": "ct.framework.api.LogService"
         }
       ]
     }

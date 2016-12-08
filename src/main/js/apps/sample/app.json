@@ -1,7 +1,7 @@
 {
   "properties": {
     "title": "OpenWeatherMap Content Bundle",
-     "amdPackages": "apprt@^3.5.2"
+     "amdPackages": "apprt@^3.2.1"
   },
   "load": {
     "bundleLocations": [
@@ -9,16 +9,16 @@
       "bundles"
     ],
     "allowedBundles": [
-      "system@^3.5.2",
-      "splashscreen@^3.5.2",
-      "map@^3.5.2",
-      "themes@^3.5.2",
-      "templates@^3.5.2",
-      "templatelayout@^3.5.2",
-      "windowmanager@^3.5.2",
-      "toolrules@^3.5.2",
-      "console@^3.5.2",
-      "banner@^3.5.2",
+      "system@^3.2.1",
+      "splashscreen@^3.2.1",
+      "map@^3.2.1",
+      "themes@^3.2.1",
+      "templates@^3.2.1",
+      "templatelayout@^3.2.1",
+      "windowmanager@^3.2.1",
+      "toolrules@^3.2.1",
+      "console@^3.2.1",
+      "banner@^3.2.1",
       "content_openweathermap"
     ]
   },
