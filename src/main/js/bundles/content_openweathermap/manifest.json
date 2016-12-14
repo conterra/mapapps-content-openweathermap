@@ -132,6 +132,8 @@
         "omniSearchTypingDelay": 500,
         "url": "http://api.openweathermap.org/data/2.5/box/city",
         "bboxes": [
+          // whole world
+          "-180,90,180,-90,6",
           // Germany
           "6,55,15,47,8"
         ],
