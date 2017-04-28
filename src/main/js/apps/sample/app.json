@@ -1,7 +1,7 @@
 {
   "properties": {
     "title": "OpenWeatherMap Content Bundle",
-     "amdPackages": "apprt@^3.2.1"
+    "amdPackages": "apprt@^3.2.1"
   },
   "load": {
     "bundleLocations": [
@@ -19,10 +19,41 @@
       "toolrules@^3.2.1",
       "console@^3.2.1",
       "banner@^3.2.1",
+      "custominfo@^3.2.1",
       "content_openweathermap"
     ]
   },
   "bundles": {
+    "custominfo": {
+      "CustomInfoToggleTool": [
+        {
+          "id": "customInfoTool",
+          "activateOnStartup": true,
+          "title": "Information",
+          "tooltip": "Information",
+          "iconClass": "icon-custom-info-info",
+          "toolClass": "ctInfo",
+          "togglable": true,
+          "widgetSettings": {
+            "title": "Information",
+            "content": "This example configuration of a content bundle adds the openweathermap datastore to the app and presents the weather data in the map. When clicking on the symbols the weather at that moment and a weather forecast is displayed",
+            "window": {
+              "marginBox": {
+                "w": 300,
+                "h": 120,
+                "l": 25,
+                "b": 70
+              },
+              "draggable": true,
+              "closable": true,
+              "modal": false,
+              "maximizable": false,
+              "resizable": false
+            }
+          }
+        }
+      ]
+    },
     "banner": {
       "BannerWidget": {
         "label": "Developer Network",
