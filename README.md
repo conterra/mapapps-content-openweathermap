@@ -3,7 +3,7 @@ This example configuration of a content bundle adds the openweathermap datastore
 
 Sample App
 ------------------
-http://www.mapapps.de/mapapps/resources/apps/downloads_content_openweathermap/index.html
+https://demos.conterra.de/mapapps/resources/apps/downloads_content_openweathermap
 
 Development Guide
 ------------------
