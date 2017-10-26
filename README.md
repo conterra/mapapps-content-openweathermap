@@ -1,5 +1,7 @@
-# Content-Bundle for Office Locations
+# Content-Bundle for OpenWeatherMap
 This example configuration of a content bundle adds the openweathermap datastore to the app and presents the weather data in the map.
+
+![Screenshot OWM Sample app](https://github.com/conterra/mapapps-content-openweathermap/blob/master/owm.JPG)
 
 Sample App
 ------------------
