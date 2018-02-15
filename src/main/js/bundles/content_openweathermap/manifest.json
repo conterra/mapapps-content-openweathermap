@@ -61,27 +61,6 @@
       ]
     },
     {
-      "name": "MapContentAdder",
-      "properties": {
-        "basemap": {
-          "id": "canvas_dark",
-          "url": "https://services.arcgisonline.com/arcgis/rest/services/Canvas/World_Dark_Gray_Base/MapServer",
-          "type": "AGS_TILED",
-          "title": "Canvas Base"
-        }
-      },
-      "references": [
-        {
-          "name": "_mapModel",
-          "providing": "ct.mapping.map.MapModel"
-        },
-        {
-          "name": "_mappingResourceRegistry",
-          "providing": "ct.mapping.mapcontent.MappingResourceRegistry"
-        }
-      ]
-    },
-    {
       "name": "OWMInfoWidgetFactory",
       "provides": [
         "ct.contentviewer.ContentRule"
