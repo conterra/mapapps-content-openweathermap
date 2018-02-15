@@ -1,6 +1,6 @@
 {
   "Bundle-SymbolicName": "content_openweathermap",
-  "Bundle-Version": "1.1.2",
+  "Bundle-Version": "1.1.3-SNAPSHOT",
   "Bundle-Name": "Content: OpenWeatherMap",
   "Bundle-Description": "This bundle provides data and functionality for OpenWeatherMap",
   "Bundle-Vendor": "con terra GmbH",
