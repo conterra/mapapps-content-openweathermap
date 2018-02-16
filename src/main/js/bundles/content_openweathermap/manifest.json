@@ -61,7 +61,7 @@
       ]
     },
     {
-<<<<<<< HEAD
+
       "name": "WeatherDrawer",
       "properties": {
       },
@@ -78,15 +78,13 @@
       ]
     },
     {
-=======
->>>>>>> 7c66243ac66f50e779f27198626e3fc516e1c251
-      "name": "OWMInfoWidgetFactory",
+     "name": "OWMInfoWidgetFactory",
       "provides": [
         "ct.contentviewer.ContentRule"
       ],
       "propertiesConstructor": true,
       "properties": {
-        "apikey": "cdb167fc43d432cfaad50b889b469e7f", //"*your api key*",
+        "apikey": "*your api key*",
         "contentRules": [
           {
             "matches": {
@@ -136,7 +134,7 @@
           // Germany
           "6,55,15,47,8"
         ],
-        "apikey": "cdb167fc43d432cfaad50b889b469e7f", //"*your api key*",
+        "apikey": "*your api key*",
         "metadata": {
           "title": "OpenWeatherMap DataStore",
           "name": "title",
