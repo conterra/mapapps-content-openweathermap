@@ -18,7 +18,6 @@ define([
     "./OpenWeatherMapStoreFactory",
     "./OWMInfoWidgetFactory",
     "./OWMInfoWidget",
-    "./MapContentAdder",
     "./WeatherDrawer",
     "ct/Stateful"
 ], {});
