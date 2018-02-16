@@ -1,6 +1,6 @@
 {
   "Bundle-SymbolicName": "content_openweathermap",
-  "Bundle-Version": "1.1.2-SNAPSHOT",
+  "Bundle-Version": "2.0.0-SNAPSHOT",
   "Bundle-Name": "Content: OpenWeatherMap",
   "Bundle-Description": "This bundle provides data and functionality for OpenWeatherMap",
   "Bundle-Vendor": "con terra GmbH",
@@ -33,6 +33,10 @@
     {
       "name": "omnisearch",
       "version": "^3.2.1"
+    },
+    {
+      "name": "dn_querybuilder",
+      "version": "^3.x"
     }
   ],
   "CSS-Themes-Extension": [
@@ -44,6 +48,17 @@
     }
   ],
   "Components": [
+    {
+      "name": "DefineQueries",
+      "enabled": true, //disable this component to deactivate predefined queries
+      "propertiesConstructor": true,
+      "references": [
+        {
+        "name": "_configAdminService",
+        "providing": "ct.framework.api.ConfigurationAdmin"
+        }
+      ]
+    },
     {
       "name": "WeatherDrawer",
       "properties": {
@@ -61,34 +76,13 @@
       ]
     },
     {
-      "name": "MapContentAdder",
-      "properties": {
-        "basemap": {
-          "id": "canvas_dark",
-          "url": "https://services.arcgisonline.com/arcgis/rest/services/Canvas/World_Dark_Gray_Base/MapServer",
-          "type": "AGS_TILED",
-          "title": "Canvas Base"
-        }
-      },
-      "references": [
-        {
-          "name": "_mapModel",
-          "providing": "ct.mapping.map.MapModel"
-        },
-        {
-          "name": "_mappingResourceRegistry",
-          "providing": "ct.mapping.mapcontent.MappingResourceRegistry"
-        }
-      ]
-    },
-    {
       "name": "OWMInfoWidgetFactory",
       "provides": [
         "ct.contentviewer.ContentRule"
       ],
       "propertiesConstructor": true,
       "properties": {
-        "apikey": "*your api key*",
+        "apikey": "cdb167fc43d432cfaad50b889b469e7f", //"*your api key*",
         "contentRules": [
           {
             "matches": {
@@ -124,7 +118,8 @@
         "description": "Datastore for OpenWeatherMap API",
         "useIn": [
           "omnisearch",
-          "selection"
+          "selection",
+          "dn_querybuilder"
         ],
         "omniSearchDefaultLabel": "${keyword}",
         "omniSearchSearchAttr": "name",
@@ -137,7 +132,7 @@
           // Germany
           "6,55,15,47,8"
         ],
-        "apikey": "*your api key*",
+        "apikey": "cdb167fc43d432cfaad50b889b469e7f", //"*your api key*",
         "metadata": {
           "title": "OpenWeatherMap DataStore",
           "name": "title",

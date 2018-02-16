@@ -20,5 +20,6 @@ define([
     "./OWMInfoWidget",
     "./MapContentAdder",
     "./WeatherDrawer",
+    "./DefineQueries",
     "ct/Stateful"
 ], {});
