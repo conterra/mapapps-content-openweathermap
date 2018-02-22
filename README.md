@@ -1,11 +1,21 @@
 # Content-Bundle for OpenWeatherMap
-This example configuration of a content bundle adds the openweathermap datastore to the app and presents the weather data in the map.
+This example configuration of a content bundle adds the openweathermap datastore to the app and presents the weather data in the map. 
+Moreover, the querybuilder bundle is preconfigured within this bundle with certain queries like: Where is the sky clear? or Where does it rain? 
 
-![Screenshot OWM Sample app](https://github.com/conterra/mapapps-content-openweathermap/blob/master/owm.JPG)
 
 Sample App
 ------------------
 https://demos.conterra.de/mapapps/resources/apps/downloads_content_openweathermap
+
+![Screenshot OWM Sample app](https://github.com/conterra/mapapps-content-openweathermap/blob/master/owm.JPG)
+
+Installation Guide
+------------------
+**Requirements:**
+- map.apps 3.9.0 or later
+- dn_querybuilder 3.x (https://github.com/conterra/mapapps-query-builder/tree/3.x)
+
+Add the Content-Bundle for OpenWeatherMap to your app.
 
 Development Guide
 ------------------

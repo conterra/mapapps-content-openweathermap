@@ -26,7 +26,7 @@ define([
             let configProps = [
                 {
                     "id": "querybuilder_0",
-                    "title": "Where does the sun shine?",
+                    "title": "Where is the sky clear?",
                     "iconClass": "icon-globe",
                     "active": true,
                     "storeId": "owm_datastore",
