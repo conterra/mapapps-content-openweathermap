@@ -16,6 +16,7 @@ Installation Guide
 - dn_querybuilder 3.x (https://github.com/conterra/mapapps-query-builder/tree/3.x)
 
 Add the Content-Bundle for OpenWeatherMap to your app.
+ATTENTION: If you already have a toolset, you need to add "querybuilder_*" to the list of tools to see the queries.
 
 Development Guide
 ------------------
