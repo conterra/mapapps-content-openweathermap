@@ -19,6 +19,7 @@
       "toolrules@^3.2.1",
       "console@^3.2.1",
       "banner@^3.2.1",
+      "toolset@^3.2.1",
       "custominfo@^3.2.1",
       "content_openweathermap"
     ]
@@ -99,6 +100,54 @@
               "url": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer",
               "type": "AGS_TILED",
               "title": "${service.streets}"
+            }
+          ]
+        }
+      },
+      "toolset": {
+        "ToolsetManager": {
+          "defaultContainer": "_map",
+          "toolsets": [
+            {
+              "id": "default_tools",
+              "title": "${ui.defaultTools}",
+              "tools": [
+                "urlEncoder",
+                "measurementtool",
+                "locationInfoTool",
+                "featureInfoTool",
+                "streetViewToggleTool"
+              ],
+              "container": "map",
+              "templates": {
+                "*": {
+                  "position": {
+                    "rel_t": 60,
+                    "rel_l": 100
+                  }
+                },
+                "modern": {
+                  "position": {
+                    "rel_t": 290,
+                    "rel_l": 46
+                  },
+                  "window": {
+                    "resizable": false,
+                    "dndDraggable": false,
+                    "marginBox": {
+                      "w": 0
+                    },
+                    "collapsable": true,
+                    "collapseAxis": {
+                      "r": true
+                    },
+                    "collapsed": {
+                      "r": true
+                    },
+                    "collapseShowOppositeHandle": true
+                  }
+                }
+              }
             }
           ]
         }

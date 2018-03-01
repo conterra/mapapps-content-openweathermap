@@ -16,13 +16,14 @@
 
 define([
     "dojo/_base/declare",
-    "dojo/_base/array"
-], function (declare, d_array) {
+    "dojo/_base/array",
+    "ct/_when"
+], function (declare, d_array, ct_when) {
     return declare([], {
         activate: function () {
             let configAdminService = this._configAdminService;
-            let factoryPid = "dn_querybuilder-QueryTools-Factory";
-            let bundleIdentifier = "dn_querybuilder";
+            let factoryPidQuery = "dn_querybuilder-QueryTools-Factory";
+            let bundleIdentifierQuery = "dn_querybuilder";
             let configProps = [
                 {
                     "id": "querybuilder_0",
@@ -141,12 +142,53 @@ define([
                     }
                 }
             ];
-            d_array.forEach(configProps, function(data){
-                let config = configAdminService.createFactoryConfiguration(factoryPid, bundleIdentifier);
-                config.update(data);
+            d_array.forEach(configProps, function (data) {
+                let configQuery = configAdminService.createFactoryConfiguration(factoryPidQuery, bundleIdentifierQuery);
+                configQuery.update(data);
             });
 
-
+            let factoryPidTool = "toolset-ToolsetManager";
+            let bundleIdentifierTool = "toolset";
+            let toolsetManager = this._toolsetManager;
+            let toolsetDefinition = toolsetManager.toolsetDefinitions;
+            let toolsetDefinitionQuery = {
+                "id": "querytools",
+                "title": "Queries",
+                "tools": [
+                    "querybuilder_*"
+                ],
+                "container": "map",
+                "templates": {
+                    "*": {
+                        "position": {
+                            "rel_t": 15,
+                            "rel_r": 350
+                        }
+                    },
+                    "modern": {
+                        "position": {
+                            "rel_t": 290,
+                            "rel_l": 46
+                        },
+                        "window": {
+                            "resizable": false,
+                            "dndDraggable": false,
+                            "marginBox": {
+                                "w": 0
+                            },
+                            "collapsable": true,
+                            "collapseAxis": {
+                                "r": true
+                            },
+                            "collapsed": {
+                                "r": true
+                            },
+                            "collapseShowOppositeHandle": true
+                        }
+                    }
+                }
+            };
+            toolsetDefinition.push(toolsetDefinitionQuery);
         },
 
         deactivate: function () {

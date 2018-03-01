@@ -1,6 +1,6 @@
 {
   "Bundle-SymbolicName": "content_openweathermap",
-  "Bundle-Version": "2.0.0-SNAPSHOT",
+  "Bundle-Version": "2.0.0",
 
   "Bundle-Name": "Content: OpenWeatherMap",
   "Bundle-Description": "This bundle provides data and functionality for OpenWeatherMap",
@@ -38,6 +38,11 @@
     {
       "name": "dn_querybuilder",
       "version": "^3.x"
+    },
+
+    {
+      "name": "toolset",
+      "version": "^3.x"
     }
   ],
   "CSS-Themes-Extension": [
@@ -57,6 +62,10 @@
         {
         "name": "_configAdminService",
         "providing": "ct.framework.api.ConfigurationAdmin"
+        },
+        {
+          "name": "_toolsetManager",
+          "providing": "toolset.Toolsetmanager"
         }
       ]
     },
