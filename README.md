@@ -7,7 +7,7 @@ Sample App
 ------------------
 https://demos.conterra.de/mapapps/resources/apps/downloads_content_openweathermap
 
-![Screenshot OWM Sample app](https://github.com/conterra/mapapps-content-openweathermap/blob/master/owm.JPG)
+![Screenshot OWM Sample app](https://github.com/conterra/mapapps-content-openweathermap/blob/master/screenshot.JPG)
 
 Installation Guide
 ------------------
