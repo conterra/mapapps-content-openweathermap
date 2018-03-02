@@ -1,0 +1,103 @@
+{
+  "properties": {
+    "title": "OpenWeatherMap Content Bundle",
+    "amdPackages": "apprt@^4.x"
+  },
+  "load": {
+    "bundleLocations": [
+      "localbundles",
+      "bundles"
+    ],
+    "allowedBundles": [
+      "system@^4.x",
+      "splashscreen@^4.x",
+      "map-init@^4.x",
+      "map-preload-2D@^4.x",
+      "map-preload-3D@^4.x",
+      "template-seasons@^4.x",
+      "theme-everlasting@^4.x",
+      "theme-winter@^4.x",
+      "theme-spring@^4.x",
+      "theme-summer@^4.x",
+      "theme-autumn@^4.x",
+      "templatelayout@^4.x",
+      "windowmanager@^4.x",
+      "toolrules@^4.x",
+      "console@^4.x",
+      "banner@^4.x",
+      "custominfo@^4.x",
+      "content_openweathermap"
+    ]
+  },
+  "bundles": {
+    "custominfo": {
+      "CustomInfoToggleTool": [
+        {
+          "id": "customInfoTool",
+          "activateOnStartup": true,
+          "title": "Information",
+          "tooltip": "Information",
+          "iconClass": "icon-custom-info-info",
+          "toolClass": "ctInfo",
+          "togglable": true,
+          "widgetSettings": {
+            "title": "Information",
+            "content": "This example configuration of a content bundle adds the openweathermap datastore to the app and presents the weather data in the map. When clicking on the symbols the weather at that moment and a weather forecast is displayed",
+            "window": {
+              "marginBox": {
+                "w": 300,
+                "h": 120,
+                "l": 25,
+                "b": 70
+              },
+              "draggable": true,
+              "closable": true,
+              "modal": false,
+              "maximizable": false,
+              "resizable": false
+            }
+          }
+        }
+      ]
+    },
+    "banner": {
+      "BannerWidget": {
+        "label": "Developer Network",
+        "image": "https://www.conterra.de/~/media/conterra/images/site_logos/conterra-logo.ashx",
+        "imagePosition": "above",
+        "link": "https://developernetwork.conterra.de"
+      }
+    },
+    "map-init": {
+      "Config": {
+        "basemaps": [
+          {
+            "id": "esri_street",
+            "title": "Street",
+            "basemap": "streets-relief-vector",
+            "selected": true
+          }
+        ],
+        "map": {
+          "layers": [],
+          "ground": {
+            "url": "https://elevation3d.arcgis.com/arcgis/rest/services/WorldElevation3D/Terrain3D/ImageServer",
+            "type": "AGS_ELEVATION"
+          }
+        },
+        "view": {
+          "viewmode": "2D",
+          "extent": {
+            "xmin": -1100000,
+            "ymin": 4000000,
+            "xmax": 3500000,
+            "ymax": 8800000,
+            "spatialReference": {
+              "wkid": 3857
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 {
   "Bundle-SymbolicName": "content_openweathermap",
-  "Bundle-Version": "2.0.-SNAPSHOT",
+  "Bundle-Version": "2.0.0-SNAPSHOT",
 
   "Bundle-Name": "Content: OpenWeatherMap",
   "Bundle-Description": "This bundle provides data and functionality for OpenWeatherMap",

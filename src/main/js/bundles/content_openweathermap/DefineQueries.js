@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 con terra GmbH (info@conterra.de)
+ * Copyright (C) 2018 con terra GmbH (info@conterra.de)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 define([
     "dojo/_base/declare",
     "dojo/_base/array",
@@ -21,10 +20,10 @@ define([
 ], function (declare, d_array, ct_when) {
     return declare([], {
         activate: function () {
-            let configAdminService = this._configAdminService;
-            let factoryPidQuery = "dn_querybuilder-QueryTools-Factory";
-            let bundleIdentifierQuery = "dn_querybuilder";
-            let configProps = [
+            var configAdminService = this._configAdminService;
+            var factoryPidQuery = "dn_querybuilder-QueryTools-Factory";
+            var bundleIdentifierQuery = "dn_querybuilder";
+            var configProps = [
                 {
                     "id": "querybuilder_0",
                     "title": "Where is the sky clear?",
@@ -143,55 +142,32 @@ define([
                 }
             ];
             d_array.forEach(configProps, function (data) {
-                let configQuery = configAdminService.createFactoryConfiguration(factoryPidQuery, bundleIdentifierQuery);
+                var configQuery = configAdminService.createFactoryConfiguration(factoryPidQuery, bundleIdentifierQuery);
                 configQuery.update(data);
             });
 
-            let factoryPidTool = "toolset-ToolsetManager";
-            let bundleIdentifierTool = "toolset";
-            let toolsetManager = this._toolsetManager;
-            let toolsetDefinition = toolsetManager.toolsetDefinitions;
-            let toolsetDefinitionQuery = {
+            var toolsetManager = this._toolsetManager;
+            var toolsetDefinition = toolsetManager.toolsetDefinitions;
+            toolsetDefinition.push({
                 "id": "querytools",
-                "title": "Queries",
-                "tools": [
-                    "querybuilder_*"
-                ],
+                "title": "OpenWeatherMap Queries",
+                "tooltip": "List of predefined questions, click to see the answer",
                 "container": "map",
-                "templates": {
-                    "*": {
-                        "position": {
-                            "rel_t": 15,
-                            "rel_r": 350
-                        }
-                    },
-                    "modern": {
-                        "position": {
-                            "rel_t": 290,
-                            "rel_l": 46
-                        },
-                        "window": {
-                            "resizable": false,
-                            "dndDraggable": false,
-                            "marginBox": {
-                                "w": 0
-                            },
-                            "collapsable": true,
-                            "collapseAxis": {
-                                "r": true
-                            },
-                            "collapsed": {
-                                "r": true
-                            },
-                            "collapseShowOppositeHandle": true
-                        }
-                    }
-                }
-            };
-            toolsetDefinition.push(toolsetDefinitionQuery);
-        },
-
-        deactivate: function () {
+                "window": {
+                    "closable": true
+                },
+                "cssClass": "ctWDYWBtn ctPrimaryInput",
+                "max_horizontal": 1,
+                "windowType": "dropdown",
+                "position": {
+                    "rel_t": 100,
+                    "rel_l": 20
+                },
+                "tools": [
+                    "querybuilder_*",
+                    "userQueryBuilderTool"
+                ]
+            });
         }
     });
 });
